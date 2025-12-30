@@ -117,13 +117,13 @@
             <source src="{{ asset('assets/video/landing.mp4') }}" type="video/mp4">
         </video>
         <div>
-            <h2 class="text-3xl font-bold text-green-700 mb-4">
-                Aplikasi Jaringan Bersama
+            <h2 class="text-3xl font-bold text-green-700 mb-4 animate-fade-down">
+                Aplikasi Sharing Bandwidth
             </h2>
-            <p class="text-gray-700 leading-relaxed mb-4">
+            <p class="text-gray-700 leading-relaxed mb-4 animate-fade-down-delay-1">
                 Aplikasi jaringan bersama BPR Sharing Bandwidth
             </p>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed animate-fade-down-delay-2">
                 Terimakasih telah menggunakan aplikasi Sharing Bandiwidth Perbarindo,
                 Untuk memudahkan anda dalam mengunakan aplikasi ini anda bisa mendownload
                 dan menginstal nya di komputer atau laptop anda, bila anda mengalami
@@ -131,8 +131,24 @@
                 pengunaan agar mempermudah anda saat penginstalan hingga cara pengunaan
                 aplikasi BPR perbarindo
             </p>
-        </div>
+            <br>
+            {{-- <h3 class="text-2xl font-bold text-green-700 mb-4">
+                Aplikasi Sharing Bandwidth
+            </h3> --}}
+            <h3 class="text-1xl font-bold text-green-700 mb-4 animate-fade-down-delay-2">
+                Sharing Bandwidth v3.1.45
+            </h3>
+            <p class="text-gray-600 mb-6 animate-fade-down-delay-2">
+                Update: 4 April 2024 <br>
+                Update ISO 27001
+            </p>
 
+            <a href="{{ asset('assets/Sharing-Bandwidth-Launcher.exe') }}"
+               class="inline-block bg-green-600 hover:bg-green-700 text-white
+                      px-6 py-3 rounded-lg transition shadow animate-fade-down-delay-2">
+                Download Aplikasi
+            </a>
+        </div>
     </div>
 </section>
 
@@ -150,90 +166,87 @@
     </div>
 </section> --}}
 
-<!-- APLIKASI -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h3 class="text-2xl font-bold text-green-700 mb-4">
-                Aplikasi Sharing Bandwidth
-            </h3>
-            <h3 class="text-1xl font-bold text-green-700 mb-4">
-                Sharing Bandwidth v3.1.45
-            </h3>
-            <p class="text-gray-600 mb-6">
-                Update: 4 April 2024 <br>
-                Update ISO 27001
+<section class="relative w-full h-[80vh] overflow-hidden">
+
+    <!-- Background Image -->
+    <img src="{{ asset('assets/img/about-bg.png') }}"
+         alt="Tentang Kami"
+         class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
+        <div class="max-w-xl text-white">
+
+            {{-- <span class="uppercase text-sm tracking-widest text-white/80 block mb-3">
+                Sekilas Pertamina
+            </span> --}}
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Panduan & Tutorial Instalasi
+            </h1>
+
+            <p class="text-lg text-white/90 mb-10 leading-relaxed">
+                Ikuti panduan resmi untuk memastikan koneksi berjalan optimal.
             </p>
 
-            <a href="{{ asset('assets/Sharing-Bandwidth-Launcher.exe') }}"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white
-                      px-6 py-3 rounded-lg transition shadow">
-                Download Aplikasi
-            </a>
-            {{-- <br><br>
-            <h3 class="text-2xl font-bold text-green-700 mb-4">
-                Aplikasi Sharing Bandwidth
-            </h3>
-            <h3 class="text-1xl font-bold text-green-700 mb-4">
-                Sharing Bandwidth v3.1.44
-            </h3>
-            <p class="text-gray-600 mb-6">
-                Update: 27 Maret 2023 <br>
-                Menu akses PNBP
-            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="{{ asset('assets/manual-book-pengguna-baru.pdf') }}"
+                   class="inline-flex items-center gap-2 px-6 py-3
+                          border border-white rounded-full
+                          hover:bg-white hover:text-black
+                          transition">
+                    Download Manual Book
+                    <span class="text-xl">↗</span>
+                </a>
 
-            <a href="{{ asset('assets/Sharing-Bandwidth-Launcher.exe') }}"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white
-                      px-6 py-3 rounded-lg transition shadow">
-                Download Aplikasi
-            </a> --}}
-        </div>
+                <a href="{{ asset('assets/video/tutorial.mp4') }}"
+                   class="inline-flex items-center gap-2 px-6 py-3
+                          border border-white/70 rounded-full
+                          text-white/90
+                          hover:bg-white hover:text-black
+                          transition">
+                    Download Video Tutorial Penginstallan
+                    <span class="text-xl">↗</span>
+                </a>
+            </div>
 
-        <div class="bg-green-50 p-8 rounded-xl shadow">
-            <ul class="space-y-3 text-gray-700">Terkendala Saat Update Installasi? <br>Ikuti langkah berikut:
-                <li>✔ Uninstall aplikasi yang sudah terinstall, jika masih ada</li>
-                <li>✔ Hapus shortcut di desktop, jika masih ada</li>
-                <li>✔ Download installer baru melalui link di samping</li>
-                <li>✔ Lakukan installasi seperti biasa. Untuk installasi driver, cukup di-skip dengan cara di-close</li>
-                <li>✔ Pastikan koneksi lancar saat akses launcher</li>
-                <li>✔ Jika proses download dalam launcher gagal atau tersangkut, klik tombol "atur ulang" pada saat awal mengakses launcher kemudian mulai launcher kembali</li>
-            </ul>
         </div>
     </div>
+
 </section>
 
 <!-- TUTORIAL -->
-<section class="py-20 bg-gray-100">
+<section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl font-bold text-green-700 mb-8 text-center">
-            Panduan & Tutorial Instalasi
+            Terkendala Saat Update Installasi?
+        </h3>
+        <h3 class="text-1xl font-bold text-green-700 mb-8 text-center">
+            Ikuti langkah berikut:
         </h3>
 
         <div class="grid md:grid-cols-3 gap-6">
             @foreach([
-                'Unduh aplikasi Sharing Bandwidth',
-                'Instal dan konfigurasi jaringan',
-                'Lakukan koneksi ke SIP PERBARINDO'
+                'Uninstall aplikasi yang sudah terinstall, jika masih ada',
+                'Hapus shortcut di desktop, jika masih ada',
+                'Download installer baru melalui link di samping',
+                'Lakukan installasi seperti biasa. Untuk installasi driver, cukup di-skip dengan cara di-close',
+                'Pastikan koneksi lancar saat akses launcher',
+                'Jika proses download dalam launcher gagal atau tersangkut, klik tombol "atur ulang" pada saat awal mengakses launcher kemudian mulai launcher kembali',
             ] as $step)
             <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                 <h4 class="font-semibold mb-2 text-green-600">
                     {{ $loop->iteration }}. {{ $step }}
                 </h4>
-                <p class="text-sm text-gray-600">
+                {{-- <p class="text-sm text-gray-600">
                     Ikuti panduan resmi untuk memastikan koneksi berjalan optimal.
-                </p>
+                </p> --}}
             </div>
             @endforeach
-            <a href="{{ asset('assets/manual-book-pengguna-baru.pdf') }}"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white
-                      px-6 py-3 rounded-lg transition shadow">
-                Download Manual Book
-            </a>
-            <a href="{{ asset('assets/video/tutorial.mp4') }}"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white
-                      px-6 py-3 rounded-lg transition shadow">
-                Download Video Tutorial Penginstallan
-            </a>
+
         </div>
     </div>
 </section>
