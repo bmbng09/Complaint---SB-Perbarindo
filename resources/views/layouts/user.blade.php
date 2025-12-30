@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name', 'SB PERBARINDO') }}</title>
+    <title>Form Pengaduan | SB PERBARINDO</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
+    {{-- <title>{{ config('app.name', 'SB PERBARINDO') }}</title> --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="bg-gray-100 min-h-screen">
 
-<nav class="bg-white shadow">
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="text-xl font-bold text-green-700">
             SB PERBARINDO
@@ -30,6 +34,9 @@
         </div>
     </div>
 </nav>
+
+
+
 
 <main class="py-10">
     @yield('content')

@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-            <title>Form Pengaduan | SB PERBARINDO</title>
+        <title>Form Pengaduan | SB PERBARINDO</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="{{ asset('assets/img/logoperbarindo.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
         {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
         <!-- Fonts -->

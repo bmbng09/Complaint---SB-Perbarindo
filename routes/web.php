@@ -26,7 +26,7 @@ Route::post('/pengaduan', [ComplaintController::class, 'store'])
 | AUTH USER
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth'])->group(function () {
+Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])
         ->name('profile.edit');
@@ -64,9 +64,8 @@ Route::middleware(['auth', 'admin'])
             ->name('complaints.download');
 
         Route::delete('/complaints/{complaint}',
-[AdminComplaintController::class, 'destroy']
+            [AdminComplaintController::class, 'destroy']
         )->name('complaints.destroy');
-
     });
 
 require __DIR__.'/auth.php';

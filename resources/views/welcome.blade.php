@@ -3,13 +3,60 @@
 @section('content')
 
 <!-- HERO -->
-<section class="relative h-screen overflow-hidden">
+<section class="relative h-screen w-full overflow-hidden">
+
+    <!-- VIDEO BACKGROUND -->
     <video autoplay muted loop playsinline
-        class="absolute w-full h-full object-cover">
+        class="absolute inset-0 w-full h-full object-cover">
         <source src="{{ asset('assets/video/header.mp4') }}" type="video/mp4">
     </video>
 
-    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- OVERLAY (biar teks kebaca) -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
+        <div class="max-w-2xl text-white">
+
+            <span class="text-sm uppercase tracking-widest text-white/70">
+                Sistem Pengaduan Resmi
+            </span>
+
+            <h1 class="mt-4 text-5xl md:text-6xl font-light leading-tight">
+                Solusi Pengaduan <br>
+                <span class="font-semibold">SIP & Sharing Bandwidth</span>
+            </h1>
+
+            <p class="mt-6 text-lg text-white/80">
+                Platform terintegrasi untuk melaporkan kendala jaringan,
+                memastikan transparansi, kecepatan, dan akurasi penanganan.
+            </p>
+
+            <div class="mt-8 flex items-center gap-4">
+                <a href="{{ route('pengaduan') }}"
+                   class="px-6 py-3 bg-white text-black rounded-full
+                          font-medium hover:bg-gray-200 transition">
+                    Laporkan Sekarang
+                </a>
+
+                {{-- <a href="#panduan"
+                   class="flex items-center gap-2 text-white/90 hover:text-white transition">
+                    <span class="w-10 h-10 flex items-center justify-center
+                                 border border-white/40 rounded-full">
+                        →
+                    </span>
+                    Panduan Penggunaan
+                </a> --}}
+            </div>
+
+        </div>
+    </div>
+</section>
+{{-- <section class="w-full h-screen relative overflow-hidden">
+    <video autoplay muted loop playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="{{ asset('assets/video/header.mp4') }}" type="video/mp4">
+    </video>
 
     <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
         <div class="text-white max-w-3xl">
@@ -25,7 +72,7 @@
             </a>
         </div>
     </div>
-</section>
+</section> --}}
 
 {{-- <section class="bg-gradient-to-r from-green-700 to-green-500 text-white">
     <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
@@ -64,20 +111,25 @@
 <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <img src="{{ asset('assets/img/logoperbarindo.png') }}"
-             class="rounded-xl shadow-lg">
-
+        {{-- <img src="{{ asset('assets/video/landing.mp4') }}"
+             class="rounded-xl"> --}}
+        <video autoplay muted loop playsinline preload="auto"class="w-80 h-auto mx-auto">
+            <source src="{{ asset('assets/video/landing.mp4') }}" type="video/mp4">
+        </video>
         <div>
             <h2 class="text-3xl font-bold text-green-700 mb-4">
-                Tentang Aplikasi Jaringan Bersama
+                Aplikasi Jaringan Bersama
             </h2>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Aplikasi Jaringan Bersama digunakan oleh BPR untuk mendukung
-                layanan transaksi dan konektivitas antar sistem perbankan.
+                Aplikasi jaringan bersama BPR Sharing Bandwidth
             </p>
             <p class="text-gray-700 leading-relaxed">
-                Melalui platform ini, setiap kendala dapat dilaporkan secara
-                terpusat, terdokumentasi, dan ditangani secara cepat.
+                Terimakasih telah menggunakan aplikasi Sharing Bandiwidth Perbarindo,
+                Untuk memudahkan anda dalam mengunakan aplikasi ini anda bisa mendownload
+                dan menginstal nya di komputer atau laptop anda, bila anda mengalami
+                kendala saat mengunakan aplikasi ini, anda bisa mendownload petunjuk
+                pengunaan agar mempermudah anda saat penginstalan hingga cara pengunaan
+                aplikasi BPR perbarindo
             </p>
         </div>
 
@@ -105,24 +157,46 @@
             <h3 class="text-2xl font-bold text-green-700 mb-4">
                 Aplikasi Sharing Bandwidth
             </h3>
+            <h3 class="text-1xl font-bold text-green-700 mb-4">
+                Sharing Bandwidth v3.1.45
+            </h3>
             <p class="text-gray-600 mb-6">
-                Aplikasi ini digunakan untuk monitoring, koneksi SIP,
-                dan integrasi jaringan BPR/BPRS dengan infrastruktur PERBARINDO.
+                Update: 4 April 2024 <br>
+                Update ISO 27001
             </p>
 
-            <a href="#"
+            <a href="{{ asset('assets/Sharing-Bandwidth-Launcher.exe') }}"
                class="inline-block bg-green-600 hover:bg-green-700 text-white
                       px-6 py-3 rounded-lg transition shadow">
                 Download Aplikasi
             </a>
+            {{-- <br><br>
+            <h3 class="text-2xl font-bold text-green-700 mb-4">
+                Aplikasi Sharing Bandwidth
+            </h3>
+            <h3 class="text-1xl font-bold text-green-700 mb-4">
+                Sharing Bandwidth v3.1.44
+            </h3>
+            <p class="text-gray-600 mb-6">
+                Update: 27 Maret 2023 <br>
+                Menu akses PNBP
+            </p>
+
+            <a href="{{ asset('assets/Sharing-Bandwidth-Launcher.exe') }}"
+               class="inline-block bg-green-600 hover:bg-green-700 text-white
+                      px-6 py-3 rounded-lg transition shadow">
+                Download Aplikasi
+            </a> --}}
         </div>
 
         <div class="bg-green-50 p-8 rounded-xl shadow">
-            <ul class="space-y-3 text-gray-700">
-                <li>✔ Monitoring koneksi real-time</li>
-                <li>✔ Integrasi SIP</li>
-                <li>✔ Standar keamanan nasional</li>
-                <li>✔ Dukungan teknis PERBARINDO</li>
+            <ul class="space-y-3 text-gray-700">Terkendala Saat Update Installasi? <br>Ikuti langkah berikut:
+                <li>✔ Uninstall aplikasi yang sudah terinstall, jika masih ada</li>
+                <li>✔ Hapus shortcut di desktop, jika masih ada</li>
+                <li>✔ Download installer baru melalui link di samping</li>
+                <li>✔ Lakukan installasi seperti biasa. Untuk installasi driver, cukup di-skip dengan cara di-close</li>
+                <li>✔ Pastikan koneksi lancar saat akses launcher</li>
+                <li>✔ Jika proses download dalam launcher gagal atau tersangkut, klik tombol "atur ulang" pada saat awal mengakses launcher kemudian mulai launcher kembali</li>
             </ul>
         </div>
     </div>
@@ -150,6 +224,16 @@
                 </p>
             </div>
             @endforeach
+            <a href="{{ asset('assets/manual-book-pengguna-baru.pdf') }}"
+               class="inline-block bg-green-600 hover:bg-green-700 text-white
+                      px-6 py-3 rounded-lg transition shadow">
+                Download Manual Book
+            </a>
+            <a href="{{ asset('assets/video/tutorial.mp4') }}"
+               class="inline-block bg-green-600 hover:bg-green-700 text-white
+                      px-6 py-3 rounded-lg transition shadow">
+                Download Video Tutorial Penginstallan
+            </a>
         </div>
     </div>
 </section>
@@ -162,16 +246,29 @@
             Frequently Asked Questions
         </h2>
 
+
         @php
         $faqs = [
-            ['q'=>'Apa itu aplikasi Jaringan Bersama?',
-             'a'=>'Aplikasi yang digunakan untuk mendukung konektivitas antar sistem BPR.'],
-            ['q'=>'Jenis kendala apa yang bisa dilaporkan?',
-             'a'=>'Kendala SIP dan Sharing Bandwidth.'],
-            ['q'=>'Berapa lama penanganan pengaduan?',
-             'a'=>'Bergantung pada kompleksitas, namun diproses secepat mungkin.'],
-            ['q'=>'Apakah bukti wajib dilampirkan?',
-             'a'=>'Sangat dianjurkan untuk mempercepat analisis.'],
+            ['q'=>'Dimana saya bisa mendapatkan serial numbernya?',
+             'a'=>'Silahkan untuk mengecek web SIP Masing-masing BPR pada bagian Menu Sharing Bandwidth -> Layanan -> Manage Layanan Aktif -> Kemudian di tab Serial Number SB3'],
+            ['q'=>'Bagaimana jika saya ingin menggunakan lebih dari satu serial number?',
+             'a'=>'Setelah BPR memiliki akun admin. maka akun tersebut memiliki akses untuk generate serial number dan reset serial number secara mandiri melalui menu Manajemen terminal dan dapat melakukan generate maksimal 5 terminal. Anda juga dapat melakukan generate langsung melalui website SIP masing-masing BPR'],
+            ['q'=>'Apa spesifikasi minimal terminal untuk menggunakan aplikasi?',
+             'a'=>'Windows 7-10 32/64 Bit,
+        Processor Minimal 4 Core,
+        Ruang Tersedia Hardisk 5GB,
+        Minimal RAM 4GB,
+        Minimal Kecepatan Internet Rekomendasi 5Mbps stabil.
+
+        Direkomendasikan Menggunakan Windows 10 64Bit'],
+            ['q'=>'Saya belum mendapat user web portal cek nik ataupun web portal databalikan?',
+             'a'=>'Bagi yang belum mendapatkan user untuk web portal dukcapil baik itu web portal cek nik ataupun webportal databalikan, silahkan untuk melakukan konfirmasi ke DPP Perbarindo Pusat, Baik itu melalui Pak Selo, Pak Ali, atau Pak Ridho untuk di teruskan ke pihak Dukcapil, dikarenakan data tersebut berada diranah Dukcapil'],
+            ['q'=>'Kok buka web portal via aplikasi kadang tertutup sendiri?',
+             'a'=>'Untuk versi 3.0.1.30 keatas, setiap akses melalui aplikasi dibatasi per 10 menit akses, jika waktu akses telah habis, maka akan muncul notifikasi yang akan mengkonfirmasikan apakah ingin melanjutkan koneksi atau tidak. Jika notifikasi tidak direspon selama lebih dari 1 menit, maka koneksi akan diputuskan secara otomatis dan portal via aplikasi akan tertutup. untuk mengakses kembali, maka silahkan untuk membuka kembali aplikasi portal pada menu web portal'],
+            ['q'=>'Apakah membuka web portal cek nik dan databalikan bisa secara bersamaan?',
+             'a'=>'Untuk versi 3.0.1.30 keatas sudah bisa. perlu diketahui, mengakses web portal melalui browser masing menggunakan random key yg di generate melalui aplikasi, sehingga setiap kali user menekan tombol akses web portal via browser, maka key akan digererate baru dan browser akan dibuka secara otomatis dari aplikasi. pada versi terbaru, key untuk portal check nik dan portal databalikan sudah dibedakan sehingga dapat diakses keduanya secara bersamaan'],
+            ['q'=>'Nik yang saya inputkan diaplikasi apakah langsung terinput di web portal databalikan?',
+             'a'=>'Tidak, setiap user wajib mengisikan sendiri databalikan pada web portal yang disediakan dukcapil yang dapat diakses melalui halaman databaikan dengan menekan portal databalikan. Perlu diketahui, karna faktor keamanan, web portal databalikan dukcapil dan aplikasi berbeda ranah sehingga data yang tersimpan pada aplikasi tidak langsung tersimpan otomatis pada portal databalikan dukcapil. Histori pengecekan nik pada aplikasi digunakan sebagai data penyimpanan tiap terminal BPR masing-masing untuk mempermudah proses pemberkasan sehingga suatu saat bisa digunakan untuk mengupload databalikan pada portal dukcapil'],
         ];
         @endphp
 

@@ -3,16 +3,16 @@
 @section('content')
 <div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-2xl font-bold text-green-700 mb-6">
+    <h2 class="text-2xl font-bold text--700 mb-6">
         Daftar Pengaduan BPR / BPRS
     </h2>
 
     <div class="bg-white shadow rounded-lg overflow-x-auto">
         <table class="min-w-full text-sm">
-            <thead class="bg-green-600 text-white">
+            <thead class="bg-[#0f172a] text-white">
                 <tr>
                     <th class="px-4 py-3 text-left">Tanggal</th>
-                    <th class="px-4 py-3 text-left">BPR</th>
+                    <th class="px-4 py-3 text-left">BPR / BPRS</th>
                     <th class="px-4 py-3">DPD</th>
                     <th class="px-4 py-3">Jenis</th>
                     <th class="px-4 py-3">Status</th>

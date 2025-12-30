@@ -16,7 +16,7 @@ class Complaint extends Model
         'deskripsi',
         'bukti_file',
         'form_pengaduan',
-        'status',
+        'status'
     ];
 
 }
