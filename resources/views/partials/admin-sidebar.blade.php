@@ -8,12 +8,12 @@
     <nav class="mt-6 space-y-1 text-sm">
 
         <a href="{{ route('admin.dashboard') }}"
-           class="block px-6 py-3 hover:bg-white/10">
+           class="block px-7 py-4 text-lg font-bold hover:bg-white/10">
            Dashboard
         </a>
 
         <a href="{{ route('admin.complaints') }}"
-           class="block px-6 py-3 hover:bg-white/10">
+           class="block px-7 py-4 text-lg font-bold hover:bg-white/10">
            Pengaduan
         </a>
 

@@ -2,30 +2,7 @@
 
 @section('content')
 
-<!-- STAT CARDS -->
-{{-- <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
 
-    <div class="bg-white rounded-xl shadow p-5">
-        <p class="text-sm text-gray-500">Total Pengaduan</p>
-        <h2 class="text-2xl font-bold text-gray-800">128</h2>
-    </div>
-
-    <div class="bg-white rounded-xl shadow p-5">
-        <p class="text-sm text-gray-500">SIP</p>
-        <h2 class="text-2xl font-bold text-blue-600">72</h2>
-    </div>
-
-    <div class="bg-white rounded-xl shadow p-5">
-        <p class="text-sm text-gray-500">Sharing Bandwidth</p>
-        <h2 class="text-2xl font-bold text-green-600">56</h2>
-    </div>
-
-    <div class="bg-white rounded-xl shadow p-5">
-        <p class="text-sm text-gray-500">Selesai</p>
-        <h2 class="text-2xl font-bold text-emerald-600">89</h2>
-    </div>
-
-</div> --}}
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
 
     <div class="bg-white rounded-xl shadow p-5">
@@ -76,32 +53,18 @@
 
 </div>
 
-{{-- <script>
-new Chart(document.getElementById('barChart'), {
-    type: 'bar',
-    data: {
-        labels: ['SIP', 'Sharing Bandwidth'],
-        datasets: [{
-            data: [72, 56],
-        }]
-    }
-});
+<!-- 🔥 NEW: TOP BPR PALING BANYAK PENGADUAN -->
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h3 class="font-semibold mb-4">Top BPR Paling Banyak Mengajukan Pengaduan</h3>
+    <canvas id="bprChart"></canvas>
+</div>
 
-new Chart(document.getElementById('lineChart'), {
-    type: 'line',
-    data: {
-        labels: ['Jan','Feb','Mar','Apr','Mei'],
-        datasets: [{
-            data: [5,12,20,18,30],
-            tension: .4
-        }]
-    }
-});
-</script> --}}
 <script>
 const chartJenis = @json($chartJenis);
 const trend = @json($trend);
+const topBPR = @json($topBPR); // ← FIX: ganti $bprFrequent ke $topBPR
 
+// chart jenis kendala
 new Chart(document.getElementById('barChart'), {
     type: 'bar',
     data: {
@@ -113,6 +76,7 @@ new Chart(document.getElementById('barChart'), {
     }
 });
 
+// trend pengaduan
 new Chart(document.getElementById('lineChart'), {
     type: 'line',
     data: {
@@ -124,7 +88,18 @@ new Chart(document.getElementById('lineChart'), {
         }]
     }
 });
-</script>
 
+// 🔥 chart BPR terbanyak
+new Chart(document.getElementById('bprChart'), {
+    type: 'bar',
+    data: {
+        labels: Object.keys(topBPR),
+        datasets: [{
+            label: 'Jumlah Pengaduan',
+            data: Object.values(topBPR),
+        }]
+    }
+});
+</script>
 
 @endsection

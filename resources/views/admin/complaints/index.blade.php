@@ -72,5 +72,12 @@
     <div class="mt-6">
         {{ $complaints->links() }}
     </div>
+
+    <a href="{{ route('admin.complaints.export.csv') }}"
+    class="px-4 py-2 rounded bg-[#0F172A] text-white hover:bg-[#1E293B]">
+        Download CSV
+    </a>
+
+
 </div>
 @endsection

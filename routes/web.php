@@ -66,6 +66,30 @@ Route::middleware(['auth', 'admin'])
         Route::delete('/complaints/{complaint}',
             [AdminComplaintController::class, 'destroy']
         )->name('complaints.destroy');
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | 🔥 FITUR BARU — EXPORT & REKAP
+        |--------------------------------------------------------------------------
+        */
+
+        // rekap BPR bulanan (halaman tabel)
+        Route::get('/rekap/bpr', [DashboardController::class, 'rekapBPR'])
+            ->name('rekap.bpr');
+
+        // export BPR bulanan
+        Route::get('/rekap/bpr/export/{format}', [DashboardController::class, 'exportBPR'])
+            ->name('rekap.bpr.export');
+
+        // export semua data pengaduan
+        Route::get('/complaints/export/{format}', [AdminComplaintController::class, 'export'])
+            ->name('complaints.export');
+
+        Route::get('/complaints/export/csv', [AdminComplaintController::class, 'exportCsv'])
+        ->name('complaints.export.csv');
+
+
     });
 
 require __DIR__.'/auth.php';

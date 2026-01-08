@@ -42,12 +42,30 @@
             <label class="block font-medium mb-1">DPD</label>
             <select name="dpd" required class="w-full border rounded px-3 py-2">
                 <option value="">-- Pilih DPD --</option>
-                <option value="DPD Jawa Barat">DPD Jawa Barat</option>
-                <option value="DPD DKI Jakarta">DPD DKI Jakarta</option>
-                <option value="DPD Jawa Tengah">DPD Jawa Tengah</option>
-                <option value="DPD Jawa Timur">DPD Jawa Timur</option>
-                <option value="DPD Sumatera">DPD Sumatera</option>
-                <!-- bisa ditambah semua DPD -->
+                <option value="DPD Jawa Barat">Aceh</option>
+                <option value="DPD DKI Jakarta">Bali</option>
+                <option value="DPD Jawa Tengah">DKI Jakarta</option>
+                <option value="DPD Jawa Tengah">D.I Yogyakarta</option>
+                <option value="DPD Jawa Tengah">Jambi</option>
+                <option value="DPD Jawa Tengah">Jawa Tengah</option>
+                <option value="DPD Jawa Timur">Jawa Barat</option>
+                <option value="DPD Sumatera">Jawa Timur</option>
+                <option value="DPD Sumatera">Kalimantan Barat - Tengah</option>
+                <option value="DPD Sumatera">Kalimantan Selatan</option>
+                <option value="DPD Sumatera">Kalimantan Timur - Utara</option>
+                <option value="DPD Sumatera">Kepulauan Riau</option>
+                <option value="DPD Sumatera">NTB</option>
+                <option value="DPD Sumatera">Lampung</option>
+                <option value="DPD Sumatera">NTT</option>
+                <option value="DPD Sumatera">Papua - Maluku</option>
+                <option value="DPD Sumatera">Sulawesi Utara - Gorontalo - Maluku</option>
+                <option value="DPD Sumatera">Sumatera Utara</option>
+                <option value="DPD Sumatera">Riau</option>
+                <option value="DPD Sumatera">Sulawesi Selatan - Barat</option>
+                <option value="DPD Sumatera">Sulawesi Tengah</option>
+                <option value="DPD Sumatera">Sulawesi Tenggara</option>
+                <option value="DPD Sumatera">Sumatera Barat</option>
+                <option value="DPD Sumatera">Sumatera Selatan - Bangka Belitung</option>
             </select>
         </div>
 
